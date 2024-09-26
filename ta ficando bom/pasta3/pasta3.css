@@ -1,0 +1,44 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    list-style: none;
+    font-style: none;
+    font-size: 1.2rem;
+   background-image: url(bo.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+.header{background-color: rgba(0, 0, 0, 0.948);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom:1%;
+    flex-wrap: wrap;
+    box-shadow: 0 0 14px rgb(67, 67, 67);
+    
+}
+nav li{
+    display: inline-block;
+}
+a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+}
+.menu a{
+    background-color: rgb(11, 162, 0);
+ box-shadow:0 0 20px rgb(24, 173, 1) ;
+ text-decoration: none;
+ color: white;
+ padding: 5px;
+}
+.menu a:hover{
+    color: rgb(9, 255, 0);
+    background-color: rgb(0, 0, 0);
+   border:2px  solid white
+}
+

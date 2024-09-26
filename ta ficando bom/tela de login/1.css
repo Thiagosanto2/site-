@@ -1,0 +1,188 @@
+body, ul, img{margin: 0px;
+    padding: 0px;
+    font-style: none;
+    font-family: Arial;
+    list-style: none;
+    font-size: 1.2rem;
+    }
+    body{
+        background-image: url(img/bom\ \(1\).png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .menu a{
+        background-color: rgb(11, 162, 0);
+     box-shadow:0 0 8px rgb(24, 173, 1) ;
+     text-decoration: none;
+     color: white;
+     padding: 5px;
+    }
+    .menu a:hover{
+        color: rgb(9, 255, 0);
+        background-color: rgb(0, 0, 0);
+       border:2px  solid white
+    }
+    
+    .search-box a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        border-radius: 50px;
+        padding: 10px;
+        
+      
+    }
+    .flex a:hover{
+        background-color: rgb(66, 66, 66);
+    
+    }
+
+    
+    .header{
+        background-color: rgba(0, 0, 0, 0.848);
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+    .menu{
+        display: flex;
+       
+    }
+    .menu li{
+        margin-left: 15px;
+    }
+    menu li a{
+        display: block;
+        padding: 20px;
+        position: absolute;
+        
+    }
+    
+    img{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        max-width: 100%;
+        display: block;
+    }
+    .flex a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        background-color: black;
+        border-radius: 30px;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        margin-left: 25%;
+    }
+    .flex a:hover{
+        background-color: rgb(0, 0, 0);
+        border: solid rgb(67, 237, 0);
+        color: rgb(68, 255, 0);
+    }
+    
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1000px;
+        margin-top: 3%;
+    margin-left: 16%;
+     
+    }
+    .flex > div{
+        flex: 1 1 250px;
+        margin: 20px;
+        
+    }
+    div{
+        border:2px solid;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+        background-color: rgb(0, 0, 0);
+    }
+    .div:hover{
+        color: gray;
+    }
+    
+    
+    
+    
+    .final{
+        background-color: rgba(0, 0, 0, 0.704);
+        margin-top: 10%;
+    padding-top: 15%;
+    
+    
+    
+    }
+    .header a>img{
+        width: 13%;
+        margin-left: -1%;
+        position: absolute;
+        top: 6px;
+        flex-wrap: wrap;
+        display: block;
+    
+    }
+   .loup-white{
+    display: none;
+   }
+  
+   
+
+   .search-box{
+    position: absolute;
+    margin-left: 15%;
+margin-top: -118%;
+    background-color: rgb(74, 74, 74);
+    height: 50px;
+    padding: 3px;
+    border-radius: 40px;
+
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+
+}
+
+.search-text{
+    background: none;
+    border: 0;
+    outline: 0;
+
+    font-size: 20px;
+
+    width: 0;
+transition: 0.6s;
+}
+.search-btn {
+   width: 50px;
+   height: 50px;
+   border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+   
+}
+
+.loupe-white{
+    display: none;
+}
+.search-box:hover > .search-text {
+    width: 320px;
+    padding-left: 20px;
+}
+
+.search-box:hover > .search-btn {
+   background-color: blue;
+}
+.search-box:hover > .search-btn .loupe-blue{
+    display: none;
+}
+.search-box:hover > .search-btn .loupe-white{
+    display: block;
+}
+
