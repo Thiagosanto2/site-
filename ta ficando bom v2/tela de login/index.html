@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'>
+    <title>Login/SignUp Page</title>
+    <link rel='stylesheet' href='index.css'>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Crie sua Conta</h1>
+                <div class="social-container">
+                    <a href="../novo teste/1.html" class="social">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="../novo teste/1.html" class="social">
+                        <i class="fab fa-google-plus"></i></a>
+                    <a href="../novo teste/1.html" class="social">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <span>ou crie sua Conta para logar</span>
+                <div class="input-container">
+                    <i class="fa fa-user sign-up-icons" id="name" style="color: #ffffff;">
+                    </i>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="input-container ">
+                    <i class="fa fa-envelope sign-up-icons" id="email" style="color: #ffffff;"></i>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="input-container ">
+                    <i class="fa fa-lock sign-up-icons" id="password" style="color: #ffffff;"></i>
+                    <input type="password" placeholder="Choose a strong password">
+                </div>
+                <button id="mainSignUp">Logar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Entrar</h1>
+                <div class="social-container">
+                    <a href="../novo teste/1.html" class="social">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="../novo teste/1.html" class="social">
+                        <i class="fab fa-google-plus"></i>
+                    </a>
+                    <a href="../novo teste/1.html" class="social">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <span>ou use sua Conta</span>
+                <i class="fa fa-user" style="color: #ffffff;"></i>
+                <input type="text" placeholder="Entre usando seu nome" id="login">
+                <i class="fa fa-lock" style="color: #ffffff;"></i>
+                <input type="password" placeholder="Entre com sua senha" id="senha">
+                <input type="submit" class="rabo" onclick="rsrs(); return false">
+                
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bem-vindo de volta</h1>
+                    <p>Para continuar se conectando conosco, faça login com seus dados</p>
+                    <button class="btn" id="signIn">Entrar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>é novo aqui?</h1>
+                    <p>Forneça seus dados pessoais para iniciar sua jornada conosco</p>
+                    <button class="btn" id="signUp">Logar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='index.js'></script>
+</body>
+
+</html>

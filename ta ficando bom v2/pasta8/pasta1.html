@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapato Casual - Loja de Sapatos Estilo & Conforto</title>
+    <link rel="stylesheet" href="pasta1.css">
+</head>
+<body>
+    <header>
+        <h1></h1>
+        <nav>
+            <ul>
+                <li><a class="home" href="../tela de login/1.html">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="produto">
+            <h2>*Nome da flor*</h2>
+            <div class="produto-container">
+                <img src="../tela de login/img/ss7.png" alt="Sapato Casual" class="produto-imagem">
+                <div class="produto-info">
+                    <h3>Descrição</h3>
+                    <p></p>
+                    <p><strong>Preço: R$ 150,00</strong></p>
+                    <button class="comprar-button" id="mostrarFormulario">Comprar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Na Floricultulra @Melsfetiches Oferecemos Flores de Todas as Variedade</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Email: contato@lojasapatos.com</p>
+            <p>Telefone: (11) 9876-5432</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Floricultura Melsfetiches</p>
+    </footer>
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+
+    <div id="formulario">
+        <h3>Digite seus Dados para Fazer a Compra</h3>
+        <form id="contatoForm">
+            <label for="nome">Nome do Usuário:</label>
+            <input type="text" placeholder="Digite seu Nome de Usuário" id="nome" name="nome" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" placeholder="Digite seu Endereço de Entrega" id="endereco" name="endereco" required>
+
+            <label for="email">Email:</label>
+            <input type="email" placeholder="Digite seu E-mail" id="email" name="email" required>
+
+            <label for="telefone">Número de Telefone:</label>
+            <input type="tel" placeholder="Digite seu Numero de Contato" id="telefone" name="telefone" required>
+
+            <button type="submit">Salvar</button>
+            <button type="button" id="fecharFormulario">Fechar</button>
+        </form>
+    </div>
+
+    <script>
+        const mostrarFormulario = document.querySelectorAll("#mostrarFormulario");
+        const formulario = document.getElementById("formulario");
+        const overlay = document.getElementById("overlay");
+        const fecharFormulario = document.getElementById("fecharFormulario");
+        const contatoForm = document.getElementById("contatoForm");
+
+        mostrarFormulario.forEach(button => {
+            button.onclick = function() {
+                formulario.classList.add("ativo");
+                overlay.classList.add("ativo");
+            };
+        });
+
+        fecharFormulario.onclick = function() {
+            formulario.classList.remove("ativo");
+            overlay.classList.remove("ativo");
+        };
+
+        overlay.onclick = function() {
+            formulario.classList.remove("ativo");
+            overlay.classList.remove("ativo");
+        };
+
+        contatoForm.onsubmit = function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            const nome = document.getElementById("nome").value;
+            const endereco = document.getElementById("endereco").value;
+            const email = document.getElementById("email").value;
+            const telefone = document.getElementById("telefone").value;
+
+            // Salva os dados no local storage
+            localStorage.setItem("nome", nome);
+            localStorage.setItem("endereco", endereco);
+            localStorage.setItem("email", email);
+            localStorage.setItem("telefone", telefone);
+
+            alert("Informações salvas com sucesso!");
+            contatoForm.reset(); // Limpa o formulário
+            formulario.classList.remove("ativo");
+            overlay.classList.remove("ativo");
+        };
+    </script>
+
+</body>
+</html>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+
+    header {
+        background-color: #000000;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+    input{
+        color: #218838;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .produto {
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 15px;
+        margin: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+
+    .botao {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .botao:hover {
+        background-color: #218838;
+    }
+
+    #formulario {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-image: url(fundin\ de\ foia.jpeg) ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.492);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+
+    #formulario.ativo {
+        display: block;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-left: -2%;
+        border: 2px solid #39d809;
+        border-radius: 4px;
+       background-color: #3f3f3fe0;
+       color: #ccc;
+    }
+
+    button[type="button"] {
+        margin-top: 3%;
+        margin-left: 70%;
+        background-color: rgb(56, 56, 56);
+        width: 30%;
+        height: 30px;
+        color: rgb(0, 0, 0);
+        border:0px solid ;
+        border-radius: 7px;
+
+
+    }
+
+    button[type="button"]:hover {
+        
+        background-color: #ff0000 ;
+        box-shadow:0 0 8px rgb(173, 1, 1) ;
+        
+        color: #f0f0f0;
+        border:0px solid;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.822);
+        z-index: 999;
+    }
+
+    .overlay.ativo {
+        display: block;
+    }
+    h3{
+       color: white;
+    }
+    label{
+        color: rgb(255, 255, 255);
+    }
+    button[type="submit"]{
+        background-color: rgb(29, 221, 0);
+        width: 40%;
+        height: 35px;
+        border:0px solid white;
+        margin-left: 34%;
+        margin-top: 2%;
+        border-radius: 7px;
+        font-family: Arial;
+    }
+    button[type="submit"]:hover{
+        background-color: #1eff00 ;
+        box-shadow:0 0 8px rgb(24, 173, 1) ;
+        
+        color: #f0f0f0;
+        border:0px solid;
+
+    }
+</style>
+</body>
+</html>
